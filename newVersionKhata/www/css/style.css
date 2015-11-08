@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+
+.button.button-small.button-outline.button-calm{
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 75px;
+	height:32;
+  	min-width: 28px;
+  	font-size: 19px;
+  	line-height: 26px;
+}
+
+
+.item.item-button-right.item-input { 
+	padding: 3px 9px 9px;
+  	min-height: 30px;
+  	font-size: 19px;
+  	line-height: 26px;
+}
