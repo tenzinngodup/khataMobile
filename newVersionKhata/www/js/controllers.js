@@ -42,17 +42,22 @@ angular.module('starter.controllers', [])
 })
 .controller('searchCtrl', function($scope, $http) {
   $scope.searchWordFunction = function() {
-    // $http({
-    //         url: 'http://khata.co/api/find.php',
-    //         method: "POST",
-    //         data: {'text': $scope.searchWord},
-    //         headers: {'Content-Type': 'application/json'}
-    //     }).success(function (data, status, headers, config) {
-    //           console.log(data);
-    //         }).error(function (data, status, headers, config) {
-    //             console.log(data);
-    //         });
-     console.log("test");
+    $http({
+            url: 'http://khata.co/api/find.php',
+            method: "POST",
+            data: {'text': $scope.searchWord},
+            headers: {'Content-Type': 'application/json'}
+        }).success(function (data, status, headers, config) {
+              console.log(data);
+              $scope.result = data; 
+            }).error(function (data, status, headers, config) {
+                console.log(data);
+            });
+  };
+
+  $scope.test = function(){
+    alert($scope.searchWord);
+
   };
 
 })
